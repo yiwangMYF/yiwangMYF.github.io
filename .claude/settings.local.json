@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle install:*)",
+      "Bash(ruby:*)",
+      "Bash(bundle:*)",
+      "Bash(gem list:*)",
+      "Bash(jekyll:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(findstr:*)",
+      "Bash(tasklist:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(python -c:*)",
+      "Bash(python -m http.server:*)"
+    ]
+  }
+}

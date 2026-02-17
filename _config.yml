@@ -21,9 +21,7 @@
 title: yiwangMYFの博客
 email: 1922736567@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  欢迎来到 yiwangMYF 的博客，这里分享技术文章、学习笔记和解决方案。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
@@ -33,12 +31,61 @@ github_username:  yiwangMYF
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-paginate
 
 permalink: /:categories/:title/
 
+# Pagination settings
+paginate: 5
+paginate_path: /page:num/
+
+# Archives settings
+jekyll-archives:
+  enabled: [categories, tags]
+  layout: archive
+  permalink:
+    categories: /categories/:name/
+    tags: /tags/:name/
+
+# Social links
+social_links:
+  github: yiwangMYF
+  # twitter: jekyllrb
+  # stackoverflow: "123456"
+  # linkedin: "username"
+  # rss: rss
+
+# Navigation
+navigation:
+  - title: 首页
+    url: /
+  - title: 关于
+    url: /about/
+  - title: 归档
+    url: /archive/
+  - title: 分类
+    url: /categories/
+  - title: 标签
+    url: /tags/
+  - title: 书籍
+    url: /book/
+  - title: 搜索
+    url: /search/
 
 
 
+
+# Analytics (Google Analytics 4)
+# ga_tracking_id: G-XXXXXXXXXX
+
+# Comments (utterances)
+utterances:
+  repo: yiwangMYF/yiwangMYF.github.io
+  issue-term: pathname
+  theme: github-light
 
 # Exclude from processing.
 # The following items will not be processed, by default.

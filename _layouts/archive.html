@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="archive">
+  <h1 class="page-heading">{{ page.title | default: page.type | capitalize }}</h1>
+
+  {{ content }}
+
+  {%- if page.type == 'categories' or page.type == 'tags' -%}
+    {%- assign archive_items = site[page.type] | sort -%}
+    <ul class="archive-list">
+      {%- for item in archive_items -%}
+        <li>
+          <h2>
+            <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+            <span class="count">({{ item.posts | size }})</span>
+          </h2>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    {%- assign archive_posts = page.posts | default: site.posts -%}
+    {%- if archive_posts.size > 0 -%}
+      <ul class="post-list">
+        {%- for post in archive_posts -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  {%- endif -%}
+</div>

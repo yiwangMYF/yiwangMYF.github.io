@@ -1,0 +1,47 @@
+---
+---
+
+// 自定义样式
+// 导入 minima 变量（可选）
+@import "minima";
+
+// 添加自定义样式
+.site-nav .page-link {
+  margin-left: 1rem;
+}
+
+// 文章标题样式
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+// 代码块样式
+.highlight {
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+// 响应式调整
+@media screen and (max-width: 600px) {
+  .site-nav .trigger {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// 暗色模式支持
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #bb86fc;
+  }
+
+  .site-header {
+    border-top: 5px solid #424242;
+    border-bottom: 1px solid #424242;
+  }
+}
