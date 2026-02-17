@@ -13,7 +13,8 @@
       "Bash(tasklist:*)",
       "Bash(powershell -Command:*)",
       "Bash(python -c:*)",
-      "Bash(python -m http.server:*)"
+      "Bash(python -m http.server:*)",
+      "Bash(pkill:*)"
     ]
   }
 }
