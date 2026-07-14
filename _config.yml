@@ -106,3 +106,5 @@ utterances:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+mermaid:true
