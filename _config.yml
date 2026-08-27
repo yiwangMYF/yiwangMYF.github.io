@@ -107,4 +107,4 @@ utterances:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-mermaid:true
+mermaid: true
